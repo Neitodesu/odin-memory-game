@@ -1,11 +1,16 @@
+import CardContainer from './components/CardContainer'
+import { useState } from 'react'
 import './css/App.css'
 
 function App() {
+  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <h1>Memory Game</h1>
-    </>
+    <div className='app-container'>
+      <h1>Pokemon Memory Game</h1>
+      <p>Score: {count}/3</p>
+      <CardContainer count={count} setCount={setCount} />
+    </div >
   )
 }
 
